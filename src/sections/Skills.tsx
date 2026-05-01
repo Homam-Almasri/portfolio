@@ -35,18 +35,25 @@ export default function Skills() {
       <motion.div className="section__header" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
         <p className="section__label">// skills</p>
         <h2 className="section__title">Technical Arsenal</h2>
-        <p className="section__subtitle">Technologies and tools I work with</p>
+        <p className="section__subtitle">Technologies, tools, and leadership skills</p>
       </motion.div>
 
       <div className="skills__container">
         <motion.div className="skill-group" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h3 className="skill-group__title"><span className="icon">⚙️</span> Backend & Web</h3>
+          <h3 className="skill-group__title"><span className="icon">👔</span> Management</h3>
+          {skills.management.map((s, i) => (
+            <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 0.1} />
+          ))}
+        </motion.div>
+
+        <motion.div className="skill-group" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
+          <h3 className="skill-group__title"><span className="icon">⚙️</span> Backend</h3>
           {skills.backend.map((s, i) => (
             <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 0.1} />
           ))}
         </motion.div>
 
-        <motion.div className="skill-group" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
+        <motion.div className="skill-group" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <h3 className="skill-group__title"><span className="icon">🎨</span> Frontend</h3>
           {skills.frontend.map((s, i) => (
             <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 0.1} />
@@ -58,15 +65,8 @@ export default function Skills() {
           {skills.tools.map((s, i) => (
             <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 0.1} />
           ))}
-        </motion.div>
-
-        <motion.div className="skill-group" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
-          <h3 className="skill-group__title"><span className="icon">💻</span> Other Languages</h3>
-          {skills.other.map((s, i) => (
-            <SkillBar key={s.name} name={s.name} level={s.level} delay={i * 0.1} />
-          ))}
           <div style={{ marginTop: 24 }}>
-            <h3 className="skill-group__title"><span className="icon">🧠</span> Concepts & Patterns</h3>
+            <h3 className="skill-group__title"><span className="icon">🧠</span> Architecture</h3>
             <div className="skill-concepts">
               {skills.concepts.map((c, i) => (
                 <motion.span
