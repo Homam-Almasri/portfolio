@@ -29,6 +29,10 @@ export default function Contact() {
               <span className="contact__link-icon">📱</span>
               <span>{personal.phone}</span>
             </a>
+            <a href={`tel:${personal.phone2}`} className="contact__link">
+              <span className="contact__link-icon">📱</span>
+              <span>{personal.phone2}</span>
+            </a>
             <a href={personal.socials.github} target="_blank" rel="noopener noreferrer" className="contact__link">
               <span className="contact__link-icon">💻</span>
               <span>GitHub Profile</span>

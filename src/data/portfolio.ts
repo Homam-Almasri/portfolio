@@ -5,6 +5,7 @@ export const portfolio = {
     tagline: "Leading teams to ship enterprise platforms & building high-concurrency systems",
     email: "Homamalmasri5@gmail.com",
     phone: "+963 982 246 606",
+    phone2: "+963 962 734 664",
     location: "Damascus, Syria",
     summary:
       "Dynamic Technical Project Manager and Back-end Expert with 4 years of hands-on experience specializing in the Laravel ecosystem and scalable system architecture. Proven track record of leading development teams to deliver complex platforms, including ERP software, multi-tenant architectures, and real-time tracking systems. Adept at bridging the gap between technical execution and business strategy, supported by a strong foundation in Mathematical Statistics. Rapidly expanding expertise in Go and Vue.js to build high-concurrency, full-stack solutions.",
@@ -240,6 +241,51 @@ export const portfolio = {
       type: "Automation + AI",
       color: "#ea580c",
       icon: "⚡",
+    },
+    {
+      name: "School Management System",
+      description:
+        "Complete school administration platform with grade tracking, attendance systems, and multi-role admin dashboards.",
+      tech: ["Laravel", "PHP", "MySQL", "Filament"],
+      type: "Backend",
+      color: "#14b8a6",
+      icon: "🏫",
+    },
+    {
+      name: "CRM & Accounting System",
+      description:
+        "Customer relationship management platform with financial reporting tools, data validation pipelines, and granular role-based access control.",
+      tech: ["Laravel", "PHP", "MySQL", "REST API"],
+      type: "Backend",
+      color: "#6366f1",
+      icon: "💼",
+    },
+    {
+      name: "Doctor Appointment System",
+      description:
+        "Healthcare scheduling platform with clinic management tools, patient records, and multi-role support for doctors, nurses, and administrators.",
+      tech: ["Laravel", "PHP", "MySQL"],
+      type: "Backend",
+      color: "#ec4899",
+      icon: "🩺",
+    },
+    {
+      name: "AI Medicine Reader",
+      description:
+        "Innovative AI-powered accessibility tool that identifies medicine names to assist visually impaired users. Combines backend engineering with AI integration.",
+      tech: ["Laravel", "AI/ML APIs", "PHP", "REST API"],
+      type: "Backend + AI",
+      color: "#a855f7",
+      icon: "🤖",
+    },
+    {
+      name: "Legacy Rails Maintenance",
+      description:
+        "Maintained and optimized legacy Ruby on Rails applications for freelance clients. Refactored codebases for performance, security, and extended lifecycle.",
+      tech: ["Ruby on Rails", "Ruby", "PostgreSQL"],
+      type: "Freelance",
+      color: "#dc2626",
+      icon: "💎",
     },
   ],
 
