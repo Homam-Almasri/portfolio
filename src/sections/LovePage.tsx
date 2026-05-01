@@ -161,6 +161,8 @@ export default function LovePage({ onBack }: { onBack: () => void }) {
               transition={{ duration: 1, delay: 2.8 }}
             >
               أريدكِ شريكة عمري وأيامي
+              <br />
+              أتمنى منكِ القبول 🩶
             </motion.p>
 
             <motion.p
