@@ -42,7 +42,7 @@ export default function SecretHeart({ onUnlock }: SecretHeartProps) {
         aria-label="secret"
       >
         <span className="secret-heart__icon">🩶</span>
-        <span className="secret-heart__label">اضغط هنا</span>
+        <span className="secret-heart__label">↙</span>
       </button>
 
       <AnimatePresence>
