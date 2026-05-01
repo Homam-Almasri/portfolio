@@ -10,7 +10,7 @@ export const portfolio = {
     summary:
       "Dynamic Technical Project Manager and Back-end Expert with 4 years of hands-on experience specializing in the Laravel ecosystem and scalable system architecture. Proven track record of leading development teams to deliver complex platforms, including ERP software, multi-tenant architectures, and real-time tracking systems. Adept at bridging the gap between technical execution and business strategy, supported by a strong foundation in Mathematical Statistics. Rapidly expanding expertise in Go and Vue.js to build high-concurrency, full-stack solutions.",
     socials: {
-      github: "https://github.com/homamalmasriinfo-alt",
+      github: "https://github.com/Homam-Almasri",
       linkedin: "https://linkedin.com/in/homam-almasri",
       email: "mailto:Homamalmasri5@gmail.com",
     },
