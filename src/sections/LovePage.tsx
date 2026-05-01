@@ -195,7 +195,7 @@ export default function LovePage({ onBack }: { onBack: () => void }) {
                 اللهم بارك لهما وبارك عليهما واجمع بينهما في خير
               </p>
               <p className="love-page__celebration-names">
-                حمام ♥ تسنيم
+                همام ♥ تسنيم
               </p>
             </motion.div>
           </motion.div>
