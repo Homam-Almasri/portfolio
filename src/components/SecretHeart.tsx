@@ -13,7 +13,7 @@ export default function SecretHeart({ onUnlock }: SecretHeartProps) {
   const [shaking, setShaking] = useState(false);
 
   const handleSubmit = () => {
-    const valid = ["تسنيم", "تسنيم زينو", "tasneem", "Tasneem", "TASNEEM", "tasneem zaino", "Tasneem Zaino", "Tasneem zaino"];
+    const valid = ["تسنيم", "تسنيم زينو", "تسنيمو", "نسمة", "tasneem", "Tasneem", "TASNEEM", "tasneem zaino", "Tasneem Zaino", "Tasneem zaino"];
     if (valid.includes(name.trim())) {
       setError(false);
       setUnlocked(true);
