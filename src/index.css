@@ -913,6 +913,34 @@ body {
   text-decoration: none;
 }
 
+/* ═══════ VISITOR COUNTER ═══════ */
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  margin-top: 12px;
+  font-size: 0.82rem;
+}
+
+.visitor-counter__icon {
+  font-size: 0.9rem;
+}
+
+.visitor-counter__count {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.visitor-counter__label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
 /* ═══════ RESPONSIVE ═══════ */
 @media (max-width: 768px) {
   .navbar__links { display: none; }

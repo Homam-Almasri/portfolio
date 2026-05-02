@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { portfolio } from "../data/portfolio";
+import VisitorCounter from "../components/VisitorCounter";
 
 const { personal, languages } = portfolio;
 
@@ -60,6 +61,7 @@ export default function Contact() {
           Built with <span style={{ color: "var(--accent-pink)" }}>♥</span> using React + Three.js •{" "}
           <a href={personal.socials.github}>Homam Al-Masri</a> © {new Date().getFullYear()}
         </p>
+        <VisitorCounter goatcounterCode="homam" />
       </footer>
     </section>
   );
