@@ -9,19 +9,28 @@ export default function VisitorCounter({ goatcounterCode }: VisitorCounterProps)
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    // Fetch total page views from GoatCounter public API
-    fetch(`https://${goatcounterCode}.goatcounter.com/counter//portfolio/.json`)
-      .then((r) => r.json())
-      .then((data) => {
-        if (data && data.count) {
-          const num = parseInt(data.count.replace(/\s/g, ""), 10);
-          setCount(num);
-        }
-      })
-      .catch(() => {
-        // Fallback: just show nothing if API fails
-        setCount(null);
-      });
+    // Try multiple path formats since GoatCounter may record with or without trailing slash
+    const paths = ["%2Fportfolio", "%2Fportfolio%2F", "portfolio"];
+    
+    const tryFetch = async () => {
+      for (const p of paths) {
+        try {
+          const r = await fetch(`https://${goatcounterCode}.goatcounter.com/counter/${p}.json`);
+          if (r.ok) {
+            const data = await r.json();
+            if (data && data.count) {
+              const num = parseInt(data.count.replace(/[^\d]/g, ""), 10);
+              if (num > 0) {
+                setCount(num);
+                return;
+              }
+            }
+          }
+        } catch (_) { /* try next */ }
+      }
+    };
+
+    tryFetch();
   }, [goatcounterCode]);
 
   if (count === null) return null;

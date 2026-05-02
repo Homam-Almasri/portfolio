@@ -17,11 +17,11 @@ export default function SecretHeart({ onUnlock }: SecretHeartProps) {
     if (valid.includes(name.trim())) {
       setError(false);
       setUnlocked(true);
-      // Track secret page unlock in GoatCounter
-      const gc = (window as any).goatcounter;
-      if (gc && gc.count) {
-        gc.count({ path: "/secret-love-page", title: "Secret Love Page Unlocked", event: true });
-      }
+      // Track secret page unlock via GoatCounter pixel (reliable even if script not loaded)
+      try {
+        const img = new Image();
+        img.src = "https://homam.goatcounter.com/count?p=/secret-love-page&t=Secret+Love+Page&e=true&rnd=" + Math.random();
+      } catch (_) { /* ignore */ }
       setTimeout(() => {
         setShowModal(false);
         setUnlocked(false);
