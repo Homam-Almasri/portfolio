@@ -46,7 +46,7 @@ export default function SecretHeart({ onUnlock }: SecretHeartProps) {
         title=""
         aria-label="secret"
       >
-        <span className="secret-heart__icon">🩶</span>
+        <span className="secret-heart__icon">♥</span>
         <span className="secret-heart__label">↙</span>
       </button>
 

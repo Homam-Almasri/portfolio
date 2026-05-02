@@ -162,7 +162,7 @@ export default function LovePage({ onBack }: { onBack: () => void }) {
             >
               أريدكِ شريكة عمري وأيامي
               <br />
-              أتمنى منكِ القبول 🩶
+              أتمنى منكِ القبول ♥
             </motion.p>
 
             <motion.p
