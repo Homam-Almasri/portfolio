@@ -17,6 +17,11 @@ export default function SecretHeart({ onUnlock }: SecretHeartProps) {
     if (valid.includes(name.trim())) {
       setError(false);
       setUnlocked(true);
+      // Track secret page unlock in GoatCounter
+      const gc = (window as any).goatcounter;
+      if (gc && gc.count) {
+        gc.count({ path: "/secret-love-page", title: "Secret Love Page Unlocked", event: true });
+      }
       setTimeout(() => {
         setShowModal(false);
         setUnlocked(false);
