@@ -26,7 +26,7 @@ export default function VisitorCounter({ goatcounterCode }: VisitorCounterProps)
               }
             }
           }
-        } catch (_) { /* try next */ }
+        } catch { /* try next */ }
       }
     };
 

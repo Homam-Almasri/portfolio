@@ -1,6 +1,6 @@
 export const portfolio = {
   personal: {
-    name: "Homam Al-Masri",
+    name: "Homam Almasri",
     title: "Technical Project Manager & Backend Engineer",
     tagline: "Leading teams to ship enterprise platforms & building high-concurrency systems",
     email: "Homamalmasri5@gmail.com",
@@ -35,16 +35,16 @@ export const portfolio = {
       ],
     },
     {
-      title: "Go Developer (Specialized Project)",
-      company: "Freelance",
-      period: "Jan 2026 — Mar 2026",
-      duration: "3 months",
-      type: "Freelance",
-      location: "Remote, Syria",
+      title: "Freelance & Contract Work",
+      company: "Self-Employed",
+      period: "May 2025 — Mar 2026",
+      duration: "11 months",
+      type: "Freelance / Contract",
+      location: "Remote",
       highlights: [
-        "Engineered a high-concurrency Real-Time Tracking System using Go (Golang) and WebSocket",
-        "Leveraged Go's goroutines to handle live data updates with minimal latency, outperforming traditional polling methods",
-        "Built a lightweight, scalable microservice architecture to integrate with existing client platforms",
+        "Go developer (Jan — Mar 2026) — engineered a high-concurrency real-time tracking system with Go and WebSocket, using goroutines for low-latency live updates in a microservice that integrates with existing platforms",
+        "Laravel developer, Azzain Company, Saudi Arabia (May — Sep 2025) — refactored legacy PHP for a Trips Management Application and ran production deployments over SSH/FTP with 99.9% uptime during critical updates",
+        "Ruby on Rails developer (Jun — Nov 2025) — stabilized legacy Rails applications with security patches and database optimization, delivering client features under strict deadlines",
       ],
     },
     {
@@ -61,31 +61,6 @@ export const portfolio = {
         "Developed high-traffic RESTful APIs for School Management Systems and Doctor Appointment portals",
         "Reduced API response time by 30% by refactoring legacy backend logic and optimizing MySQL queries and indexing",
         "Integrated third-party services and webhooks to automate educational workflows and payment notifications",
-      ],
-    },
-    {
-      title: "Freelance Ruby on Rails Developer",
-      company: "Self-Employed / Freelance",
-      period: "Jun 2025 — Nov 2025",
-      duration: "6 months",
-      type: "Freelance",
-      location: "Damascus, Syria",
-      highlights: [
-        "Maintained and stabilized legacy Rails applications, focusing on security patches and database optimization",
-        "Delivered feature enhancements for diverse client projects under strict deadlines",
-      ],
-    },
-    {
-      title: "Back-End Laravel Developer (Contract)",
-      company: "Azzain Company",
-      period: "May 2025 — Sep 2025",
-      duration: "5 months",
-      type: "Freelance / Contract",
-      location: "Saudi Arabia (Remote)",
-      highlights: [
-        "Refactored legacy PHP code for a Trips Management Application, improving scalability and performance",
-        "Managed production deployments via FTP/SSH, ensuring 99.9% uptime during critical updates",
-        "Collaborated with international stakeholders to resolve performance bottlenecks in accounting and booking modules",
       ],
     },
     {
