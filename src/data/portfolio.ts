@@ -1,14 +1,14 @@
 export const portfolio = {
   personal: {
     name: "Homam Al-Masri",
-    title: "Technical Project Manager & Full-Stack Developer",
+    title: "Technical Project Manager & Backend Engineer",
     tagline: "Leading teams to ship enterprise platforms & building high-concurrency systems",
     email: "Homamalmasri5@gmail.com",
     phone: "+963 982 246 606",
     phone2: "+963 962 734 664",
     location: "Damascus, Syria",
     summary:
-      "Dynamic Technical Project Manager and Back-end Expert with 4 years of hands-on experience specializing in the Laravel ecosystem and scalable system architecture. Proven track record of leading development teams to deliver complex platforms, including ERP software, multi-tenant architectures, and real-time tracking systems. Adept at bridging the gap between technical execution and business strategy, supported by a strong foundation in Mathematical Statistics. Rapidly expanding expertise in Go and Vue.js to build high-concurrency, full-stack solutions.",
+      "Technical Project Manager and backend engineer with nearly 4 years in the Laravel ecosystem. I lead development teams at JoyBox and ship production systems hands-on: a fleet payroll platform guarded by 330+ automated tests, ERP accounting modules, multi-tenant applications, and a real-time tracking service in Go. A BSc in Mathematical Statistics backs the financial and reporting work. I use AI-assisted development to deliver production frontends (React, Three.js, Vue.js) and to automate code review.",
     socials: {
       github: "https://github.com/Homam-Almasri",
       linkedin: "https://linkedin.com/in/homam-almasri",
@@ -25,8 +25,10 @@ export const portfolio = {
       type: "Full-Time",
       location: "Damascus, Syria",
       highlights: [
+        "Built and operate FleetOps, a fleet and driver-payroll platform for a Kuwait delivery operator (Laravel 13, React 18) — contracts, daily logs, tiered and zone-based driver pay, client billing, contract profitability, and bank/cash salary disbursement",
+        "Guarded its payroll with 330+ automated tests and a golden-master gate that recalculates every payroll sheet against frozen production data before each deploy",
         "Rapidly delivered the 'Riad Alsalheen' TV Channel App from scratch in just one month — live streaming, media playlists, video uploads, and interactive gaming modules",
-        "Supervised the development of a comprehensive ERP system — warehouse inventory, automated invoicing, and financial tracking",
+        "Supervise the Zahi ERP (inventory, invoicing, accounting) — audited 34 reports against the database and fixed sales-return pricing, journal-balance and trial-balance errors",
         "Lead cross-functional development teams through the full SDLC, ensuring on-time delivery of enterprise-grade systems",
         "Act as primary technical architect, translating complex business requirements into actionable sprint milestones and technical specs",
         "Standardized CI/CD workflows and implemented rigorous peer-review processes to maintain high code quality",
@@ -105,7 +107,8 @@ export const portfolio = {
     "Reduced API response time by 30% through query optimization and indexing",
     "Delivered TV Channel App from scratch in just one month",
     "Managed 99.9% uptime during critical production deployments",
-    "Applied statistical logic to optimize data validation algorithms in financial software",
+    "Guarded fleet payroll with 330+ automated tests and a golden-master check before every deploy",
+    "Audited 34 ERP reports against the database and flagged 27 incorrect columns",
     "Built n8n automation workflow with AI-powered code review, commit history tracking, and email reporting",
   ],
 
@@ -162,6 +165,51 @@ export const portfolio = {
 
   projects: [
     {
+      name: "FleetOps — Fleet & Payroll Platform",
+      description:
+        "Fleet and driver-payroll platform for a Kuwait delivery operator: contracts, daily logs, tiered and zone-based driver pay, client billing, contract profitability, and bank/cash salary disbursement. Guarded by 330+ automated tests and a golden-master payroll check.",
+      tech: ["Laravel 13", "PHP 8.4", "MySQL", "React 18", "PHPUnit"],
+      type: "Full Build",
+      color: "#22c55e",
+      icon: "🚚",
+    },
+    {
+      name: "JoyBox Website — The Box",
+      description:
+        "Framework-free, scroll-driven 3D company site where the logo is a lit WebGL object that opens as the reader scrolls. GPU fluid simulation, eight live interactive cards, a playable 3D mini-game, Arabic/English, and a no-WebGL fallback.",
+      tech: ["TypeScript", "Three.js", "WebGL", "GSAP", "Vite"],
+      type: "Frontend (AI-Guided)",
+      color: "#10b981",
+      icon: "📦",
+    },
+    {
+      name: "Zahi ERP — Accounting & Distribution",
+      description:
+        "Accounting-correctness work on a large modular ERP: server-side sales-return pricing, balanced journal entries, trial balance, and opening/closing balances on reports. Audited 34 reports and built a static-analysis tool that runs in CI.",
+      tech: ["Laravel 10", "Angular 15", "MySQL", "Node.js"],
+      type: "ERP / Accounting",
+      color: "#0ea5e9",
+      icon: "🏢",
+    },
+    {
+      name: "Sheikh Anas Al-Dawamneh Platform",
+      description:
+        "Bilingual Arabic/English academic platform for lectures, sermons, news and events, with in-page live editing, save-and-publish, role-based access, and an image library with cropping. Deployed on a Linux VPS.",
+      tech: ["React 18", "Vite", "Express", "SQLite", "Tailwind"],
+      type: "Full-Stack (AI-Guided)",
+      color: "#d97706",
+      icon: "🕌",
+    },
+    {
+      name: "Nour Organization Website",
+      description:
+        "Bilingual RTL/LTR site for a nonprofit: programs, events, blog, gallery and volunteering, with live content editing, JWT roles, a visitor submissions inbox, rate limiting and honeypot protection.",
+      tech: ["React 18", "Vite", "Express", "SQLite", "JWT"],
+      type: "Full-Stack (AI-Guided)",
+      color: "#f43f5e",
+      icon: "🕊️",
+    },
+    {
       name: "Riad Alsalheen TV App",
       description:
         "Complete TV channel application delivered from scratch in one month. Features live stream sharing, media playlists, video uploads, and interactive gaming modules.",
@@ -169,15 +217,6 @@ export const portfolio = {
       type: "Project Management",
       color: "#7c3aed",
       icon: "📺",
-    },
-    {
-      name: "Enterprise ERP System",
-      description:
-        "Comprehensive ERP platform with warehouse inventory management, automated invoicing, financial tracking, and multi-module administration.",
-      tech: ["Laravel", "Filament PHP", "MySQL", "Vue.js"],
-      type: "Project Management",
-      color: "#0ea5e9",
-      icon: "🏢",
     },
     {
       name: "Real-Time Tracking System",
@@ -214,15 +253,6 @@ export const portfolio = {
       type: "Backend",
       color: "#f59e0b",
       icon: "📚",
-    },
-    {
-      name: "JoyBox 3D Platform",
-      description:
-        "Interactive 3D company website featuring a draggable cube navigation, WebGL particle effects, and floating card interfaces. AI-guided frontend development.",
-      tech: ["React", "Three.js", "TypeScript", "Framer Motion"],
-      type: "Frontend (AI-Guided)",
-      color: "#10b981",
-      icon: "🎮",
     },
     {
       name: "Trips Management App",

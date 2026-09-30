@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homam Almasri — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #1e3a5f;
+      --accent: #2c6faa;
+      --accent-light: #e8f0fe;
+      --text: #1a1a2e;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f0f4f8;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: #f5f5f5;
+      line-height: 1.5;
+      font-size: 10.5pt;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cv {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--bg);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* ═══════ HEADER ═══════ */
+    .header {
+      background: linear-gradient(135deg, var(--primary), #2d4a7a);
+      color: #fff;
+      padding: 32px 40px 28px;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #4da3ff, var(--accent));
+    }
+
+    .header__name {
+      font-size: 26pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header__title {
+      font-size: 12pt;
+      font-weight: 400;
+      color: #b8d4f0;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .header__contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+      font-size: 9pt;
+      color: #d0e3f5;
+    }
+
+    .header__contacts a,
+    .header__contacts span {
+      color: #d0e3f5;
+      text-decoration: none;
+    }
+
+    .header__contacts > *:not(:last-child)::after {
+      content: '|';
+      margin: 0 10px;
+      color: #7fa3c9;
+    }
+
+    .header__contacts a:hover {
+      color: #fff;
+    }
+
+    /* ═══════ BODY ═══════ */
+    .body {
+      padding: 28px 40px 36px;
+    }
+
+    /* ═══════ SECTIONS ═══════ */
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section__title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 14px;
+      break-after: avoid;
+    }
+
+    /* ═══════ SUMMARY ═══════ */
+    .summary {
+      color: var(--text-secondary);
+      font-size: 10pt;
+      line-height: 1.7;
+    }
+
+    .summary strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ═══════ SKILLS ═══════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+
+    .skill-category {
+      margin-bottom: 2px;
+    }
+
+    .skill-category__label {
+      font-weight: 600;
+      font-size: 9.5pt;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .skill-tag--highlight {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ═══════ EXPERIENCE ═══════ */
+    .exp-item {
+      margin-bottom: 16px;
+      padding-left: 14px;
+      border-left: 3px solid var(--accent-light);
+      position: relative;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -5.5px;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 10.5pt;
+      color: var(--text);
+    }
+
+    .exp-period {
+      font-size: 8.5pt;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 9.5pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .exp-location {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 9.5pt;
+      color: var(--text-secondary);
+      margin-bottom: 3px;
+      line-height: 1.55;
+      break-inside: avoid;
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .exp-bullets strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ═══════ EDUCATION ═══════ */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 10.5pt;
+    }
+
+    .edu-school {
+      font-size: 9.5pt;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .edu-details {
+      font-size: 9pt;
+      color: var(--text-muted);
+    }
+
+    /* ═══════ BOTTOM BAR ═══════ */
+    .bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      background: var(--tag-bg);
+      border-top: 1px solid var(--border);
+      font-size: 8.5pt;
+      color: var(--text-muted);
+    }
+
+    .bottom-bar strong {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ═══════ PRINT ═══════ */
+    @media print {
+      body { background: #fff; font-size: 10pt; }
+      .cv { box-shadow: none; margin: 0; max-width: 100%; overflow: visible; }
+      .header { padding: 24px 32px 20px; }
+      .body { padding: 20px 32px 24px; }
+      .bottom-bar { padding: 10px 32px; }
+      .section { margin-bottom: 16px; }
+      .exp-item { break-inside: avoid; }
+      @page { margin: 12mm 0; size: A4; }
+      @page :first { margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv">
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="header">
+      <h1 class="header__name">HOMAM ALMASRI</h1>
+      <p class="header__title">Technical Project Manager &amp; Backend Engineer</p>
+      <div class="header__contacts">
+        <a href="mailto:Homamalmasri5@gmail.com">Homamalmasri5@gmail.com</a>
+        <a href="tel:+963982246606">+963 982 246 606</a>
+        <span>Damascus, Syria</span>
+        <a href="https://homam-almasri.github.io/portfolio" target="_blank">homam-almasri.github.io/portfolio</a>
+        <a href="https://github.com/Homam-Almasri" target="_blank">github.com/Homam-Almasri</a>
+        <a href="https://linkedin.com/in/homam-almasri" target="_blank">linkedin.com/in/homam-almasri</a>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- ═══════ SUMMARY ═══════ -->
+      <div class="section">
+        <h2 class="section__title">Professional Summary</h2>
+        <p class="summary">
+          <strong>Technical Project Manager and backend engineer</strong> with nearly <strong>4 years</strong> in the <strong>Laravel ecosystem</strong>. I lead development teams at JoyBox and ship production systems hands-on: a <strong>fleet payroll platform guarded by 330+ automated tests</strong>, ERP accounting modules, multi-tenant applications, and a real-time tracking service in Go. A BSc in Mathematical Statistics backs the financial and reporting work. I use <strong>AI-assisted development</strong> to deliver production frontends (React, Three.js, Vue.js) and to automate code review.
+        </p>
+      </div>
+
+      <!-- ═══════ SKILLS ═══════ -->
+      <div class="section">
+        <h2 class="section__title">Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-category__label">Management</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Project Management</span>
+              <span class="skill-tag">Agile/Scrum</span>
+              <span class="skill-tag">ERP Supervision</span>
+              <span class="skill-tag">Team Leadership</span>
+              <span class="skill-tag">SDLC</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category__label">Backend</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--highlight">Laravel</span>
+              <span class="skill-tag skill-tag--highlight">Filament PHP</span>
+              <span class="skill-tag">Go (Golang)</span>
+              <span class="skill-tag">Ruby on Rails</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">Node.js / Express</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category__label">Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5/CSS3</span>
+              <span class="skill-tag">Livewire</span>
+              <span class="skill-tag">Alpine.js</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category__label">Tools &amp; Infrastructure</div>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">Git/CI/CD</span>
+              <span class="skill-tag">PHPUnit</span>
+              <span class="skill-tag">Linux VPS / Apache</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">SSH/FTP</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category__label">Architecture</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Multi-Tenant Systems</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">Real-Time Tracking</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category__label">AI-Guided Development</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--highlight">Prompt Engineering</span>
+              <span class="skill-tag skill-tag--highlight">AI-Guided Dev</span>
+              <span class="skill-tag">React / Three.js</span>
+              <span class="skill-tag">Vue.js / JavaScript</span>
+              <span class="skill-tag">n8n Automation</span>
+              <span class="skill-tag">MCP Tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════ EXPERIENCE ═══════ -->
+      <div class="section">
+        <h2 class="section__title">Professional Experience</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Technical Project Manager</span>
+            <span class="exp-period">Sep 2025 — Present</span>
+          </div>
+          <div class="exp-company">JoyBox Company <span class="exp-location">• Damascus, Syria</span></div>
+          <ul class="exp-bullets">
+            <li>Built and operate <strong>FleetOps</strong>, a fleet and driver-payroll platform for a Kuwait delivery operator (Laravel 13, React 18): contracts, daily logs, tiered and zone-based driver pay, client billing, contract profitability, and bank/cash salary disbursement</li>
+            <li>Guarded its payroll with <strong>330+ automated tests</strong> and a golden-master gate that recalculates every payroll sheet against frozen production data before each deploy</li>
+            <li><strong>Delivered the "Riad Alsalheen" TV Channel App from scratch in one month</strong>: live streaming, media playlists, video uploads, and interactive gaming modules</li>
+            <li>Supervise the <strong>Zahi ERP</strong> (inventory, invoicing, accounting): audited <strong>34 reports</strong> against the database and fixed sales-return pricing, journal-balance and trial-balance errors</li>
+            <li>Lead cross-functional teams through the <strong>full SDLC</strong>, turning business requirements into sprint milestones as primary technical architect</li>
+            <li>Standardized <strong>CI/CD workflows</strong> and peer review across the organization</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Freelance &amp; Contract Work</span>
+            <span class="exp-period">May 2025 — Mar 2026</span>
+          </div>
+          <div class="exp-company">Self-Employed <span class="exp-location">• Remote</span></div>
+          <ul class="exp-bullets">
+            <li><strong>Go developer</strong> (Jan — Mar 2026): engineered a high-concurrency <strong>real-time tracking system</strong> with Go and WebSocket, using goroutines for low-latency live updates in a microservice that integrates with existing platforms</li>
+            <li><strong>Laravel developer, Azzain Company, Saudi Arabia</strong> (May — Sep 2025): refactored legacy PHP for a Trips Management Application and ran production deployments over SSH/FTP with <strong>99.9% uptime</strong> during critical updates</li>
+            <li><strong>Ruby on Rails developer</strong> (Jun — Nov 2025): stabilized legacy Rails applications with security patches and database optimization, delivering client features under strict deadlines</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Back-End Laravel Developer</span>
+            <span class="exp-period">Apr 2023 — Aug 2025</span>
+          </div>
+          <div class="exp-company">JoyBox Company <span class="exp-location">• Damascus, Syria</span></div>
+          <ul class="exp-bullets">
+            <li>Architected a <strong>Multi-Tenant Task Management System</strong> using Laravel &amp; Filament PHP with robust data isolation</li>
+            <li>Refactored core logic for the <strong>"Shefaa" medical platform</strong>: consultant-patient workflow and booking engine</li>
+            <li>Built a <strong>Course Management System</strong>: automated certificates, teacher/student scheduling, admin dashboards</li>
+            <li>Developed high-traffic <strong>RESTful APIs</strong> for School Management and Doctor Appointment portals, and <strong>cut API response time by 30%</strong> through query optimization and MySQL indexing</li>
+            <li>Integrated third-party services and webhooks to automate educational and payment workflows</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Software Tester &amp; Laravel Developer</span>
+            <span class="exp-period">Jan 2023 — Apr 2023</span>
+          </div>
+          <div class="exp-company">JoyBox Company <span class="exp-location">• Damascus, Syria</span></div>
+          <ul class="exp-bullets">
+            <li>Executed test plans, test cases, and <strong>regression testing</strong> for enterprise web applications, including cross-browser and responsive checks</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ═══════ KEY PROJECTS ═══════ -->
+      <div class="section">
+        <h2 class="section__title">Key Projects</h2>
+        <ul class="exp-bullets">
+          <li><strong>JoyBox Company Website, "The Box"</strong> <em>(TypeScript, Three.js, GSAP)</em>: framework-free, scroll-driven 3D site where the logo is a lit WebGL object that opens as the reader scrolls, with a GPU fluid simulation, a playable 3D mini-game, and a no-WebGL fallback</li>
+          <li><strong>Sheikh Anas Al-Dawamneh Platform &amp; Nour Organization Website</strong> <em>(React 18, Express, SQLite)</em>: two bilingual RTL/LTR content platforms with in-page live editing, role-based access, and a visitor submissions inbox, deployed on a Linux VPS</li>
+          <li><strong>Zahi ERP Static Checks</strong> <em>(Node.js)</em>: analysis tool that catches permission, endpoint and type-drift bugs across a modular Laravel 10 / Angular 15 codebase, with a baseline so CI fails only on new errors</li>
+          <li><strong>AI Code Review Pipeline</strong> <em>(n8n)</em>: captures Git pushes, sends the code to AI for a full logic review with SRS context, and emails the report</li>
+          <li><strong>Personal 3D Portfolio</strong> <em>(React Three Fiber)</em>: animated starfield, glassmorphism UI, and an interactive 3D scene</li>
+        </ul>
+      </div>
+
+      <!-- ═══════ EDUCATION ═══════ -->
+      <div class="section">
+        <h2 class="section__title">Education</h2>
+        <div class="edu-item">
+          <div>
+            <div class="edu-degree">BSc in Mathematical Statistics</div>
+            <div class="edu-school">University of Damascus</div>
+          </div>
+          <div class="edu-details">2019 — 2023 &nbsp;•&nbsp; GPA: 3.5 / 4.0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ BOTTOM BAR ═══════ -->
+    <div class="bottom-bar">
+      <div><strong>Languages:</strong> Arabic (Native) &nbsp;•&nbsp; English (Advanced)</div>
+      <div>References available upon request</div>
+    </div>
+  </div>
+</body>
+</html>

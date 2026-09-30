@@ -56,6 +56,14 @@ export default function Hero() {
           <a href="#contact" className="btn btn--ghost">
             Get in Touch
           </a>
+          <a
+            href={`${import.meta.env.BASE_URL}Homam-Almasri-CV.pdf`}
+            className="btn btn--ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download CV
+          </a>
         </motion.div>
       </div>
 
