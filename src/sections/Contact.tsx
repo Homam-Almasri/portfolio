@@ -105,11 +105,6 @@ export default function Contact() {
               <span className="big-link__text">Connect on LinkedIn</span>
               <span className="big-link__arrow" aria-hidden>↗</span>
             </a>
-            <a className="big-link" href={personal.socials.github} target="_blank" rel="noopener noreferrer">
-              <span className="big-link__label">GET /github</span>
-              <span className="big-link__text">Read my code</span>
-              <span className="big-link__arrow" aria-hidden>↗</span>
-            </a>
           </motion.div>
         </div>
 
